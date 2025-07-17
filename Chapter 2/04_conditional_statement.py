@@ -17,7 +17,7 @@ else:
 a=5
 if(a>2):
     print("Number is greater than 2")
-if(a>3):
+elif(a>3):
     print("Number is greater than 3")
 
 #here each and every condition is checked 
