@@ -1,37 +1,37 @@
 #arthmetic operators
-# a=4
-# b=2
-# print(a+b)
-# print(a-b)
-# print(a*b)
-# print(a/b)
-# print(a%b)
-# print(a**b) #power
+a=4
+b=2
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%b)
+print(a**b) #power
 
 #relational operator / comparision operator
 
-# c=50
-# d=20
-# print(c==d)
-# print(c!=d)
-# print(c>=d)
-# print(c<=d)
+c=50
+d=20
+print(c==d)
+print(c!=d)
+print(c>=d)
+print(c<=d)
 
 #assignment operator
 
-# num = 10
-# num+=10
-# print("num is",num)
-# num-=10
-# print("num is",num)
-# num*=10
-# print("num is",num)
-# num/=10
-# print("num is",num)
-# num%=10
-# print("num is",num)
-# num**=2
-# print("num is",num)
+num = 10
+num+=10
+print("num is",num)
+num-=10
+print("num is",num)
+num*=10
+print("num is",num)
+num/=10
+print("num is",num)
+num%=10
+print("num is",num)
+num**=2
+print("num is",num)
 
 #logical operator
 # not , and , or
