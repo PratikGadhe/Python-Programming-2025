@@ -1,4 +1,4 @@
-# Program to the maximum in an array.
+# Program to the minimum in an array.
 arr=[1,3,5,9,0,-1,2,5]
 smaller=arr[0]
 for i in range(1,len(arr)):
