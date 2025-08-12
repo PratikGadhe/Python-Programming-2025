@@ -2,5 +2,23 @@
 """
 A Disarium number is a number that is equal to the sum of its digits each raised to the power of its respective position.
 For example, 89 is a Disarium number because
-8^2+9^2=89
+8^1+9^2=89
 """
+num = int(input("Enter a number : "))
+temp = num
+
+# Find number of digits
+length = len(str(num))
+
+sum_digits = 0
+
+while temp > 0:
+    digit = temp % 10
+    sum_digits += digit ** length
+    temp //= 10
+    length -= 1  # decrease position from right to left
+
+if sum_digits == num:
+    print(f"{num} is a Disarium number")
+else:
+    print(f"{num} is not a Disarium number")
