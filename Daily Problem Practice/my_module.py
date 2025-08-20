@@ -9,6 +9,7 @@ def disarium(n):
     else:
         return False
 def dis_range(n):
+    '''this will print Disarium number'''
     for i in range(1,n+1):
         initial=1
         num=0

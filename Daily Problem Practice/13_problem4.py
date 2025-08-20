@@ -2,6 +2,7 @@
 import my_module
 n=int(input("Enter range : "))
 # print(my_module.dis_range(n))
+print(my_module.dis_range.__doc__)
 for i in range(1,n+1):
     initial=1
     num=0
