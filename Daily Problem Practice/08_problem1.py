@@ -25,3 +25,5 @@ for i in str(square):
       num+=int(i)
 if(num == n):
       print(f"{n} is a neon number")
+else:
+      print(f"{n} is not a neon number")
