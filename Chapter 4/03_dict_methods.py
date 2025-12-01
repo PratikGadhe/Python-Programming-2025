@@ -21,7 +21,7 @@ pair=list(dict.items())
 
 # but both have some minorr difference like..
 # print(dict["Name2"])    #it will give error !
-# print(dict.get("Name2"))    #it will not give error thats the difference
+print(dict.get("Name2"))    #it will not give error thats the difference
 
 #5. dict.update() : insert specified items in dictionary
 

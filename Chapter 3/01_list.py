@@ -5,15 +5,15 @@ It can store elements of different types (integer, float, string, etc.)"""
 marks=["pratik",20,99.5]
 print(type(marks))
 print(len(marks))
-# print(marks[1])
+print(marks)
 
 #mutable example
 marks[0]="Sanket"
 marks[1]=23
-# print(marks)
+print(marks)
 
 #indexing in list
 marks1=[90,80,70,60,50,40,30,20,10]
 print(marks1[0:6])
 #negative indexing
-print(marks1[-5:-1])
+print(marks1[-5:-1])#[4:8]

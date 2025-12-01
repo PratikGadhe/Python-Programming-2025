@@ -30,9 +30,9 @@ list4.insert(2,4)
 #5. list.remove() : remove the first occurence number from list 
 list5=[1,3,5,7,1,2,5]
 list5.remove(1) #this will remove the 1st one from the list
-# print(list5)
+print(list5)
 
 #6. list.pop(idx) : this will remove the value from the given index
 list6=[1,3,5,7,9,0]
 list6.pop(5)
-print(list6)
+# print(list6)

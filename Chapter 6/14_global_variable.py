@@ -6,7 +6,6 @@ def hello():
     print(a)
     return x;
 a=15 #this is global variable
-
 def world():
     # to change the value of global variable we use Global <variable_name>
     global y
@@ -14,3 +13,4 @@ def world():
     return y
 y=0
 print(world())
+hello()
