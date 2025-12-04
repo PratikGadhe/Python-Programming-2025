@@ -176,4 +176,174 @@ print(sum)
 array=[90,10,11,212,23,11,1]
 array.sort(reverse=True)
 print("largest=",array[0])
+
+arr=[1,2,3,4,5]
+length=int((len(arr))/2)
+first=arr[:length]
+second=arr[length:]
+result=second+first
+print(result)
+
+r=int(input("Enter number of rows : "))
+c=int(input("Enter number of columns : "))
+matrix=[[0 for _ in range(c)]for _ in range(r)] #2d array
+for i in range(0,r):
+    for j in range(0,c):
+        matrix[i][j]=int(input(f"Enter [{i}][{j}] : "))
+print("\nMatrix:")
+for r in matrix:
+    print(r)
+  
+r=int(input("Enter row : "))
+c=int(input("Columns : "))
+matrix1=[[0 for _ in range(c)]for _ in range(r)]
+matrix2=[[0 for _ in range(c)]for _ in range(r)]
+result=[[0 for _ in range(c)]for _ in range(r)]
+print("-- Matrix 1 --")
+for i in range(r):
+    for j in range(c):
+        matrix1[i][j]=int(input(f"[{i}][{j}] : "))
+print("-- Matrix 2 --")
+for i in range(r):
+    for j in range(c):
+        matrix2[i][j]=int(input(f"[{i}][{j}] : "))
+print("-- Sum --")
+for i in range(r):
+    for j in range(c):
+        result[i][j]=matrix1[i][j]+matrix2[i][j]
+for r in result:
+    print(r)
+
+r=int(input("Enter row : "))
+c=int(input("Columns : "))
+matrix1=[[0 for _ in range(c)]for _ in range(r)]
+result=[[0 for _ in range(c)]for _ in range(r)]
+print("-- Matrix 1 --")
+for i in range(r):
+    for j in range(c):
+        matrix1[i][j]=int(input(f"[{i}][{j}] : "))
+
+print("result")
+for i in range(r):
+    for j in range(c):
+        result[i][j]=matrix1[j][i]
+for r in result:
+    print(r)
+
+str=input("Enter string : ")
+spilt = str.split()
+list=[]
+for i in spilt:
+    list.append(i.capitalize())
+list.sort()
+for i in list:
+    print(i)
+
+
+punct=""
+str=input("Enter a string : ")
+for char in str:
+    if char not in punctuations:
+        punct+=char
+print(punct)
+
+n=input("Enter a number : ")
+pow=1
+num=0
+for i in n:
+    num+=int(i)**pow
+    pow+=1
+if(int(n)==num):
+    print("Disarium number")
+else:
+    print("NOT")
+
+n=int(input("Enter range : "))
+for i in range(n):
+    pow =1
+    num=0
+    for j in str(i):
+        num+=int(j)**pow
+        pow+=1
+    if(num == i):
+        print(i,end=" | ")
+print("\n")
+
+n=input("Enter a number : ")
+sum=0
+for i in n:
+    sum+=int(i)
+if(int(n)%sum == 0):
+    print(int(n),"is harshad number")
+else:
+    print("NOT")
+    
+n=int(input("Enter range : "))
+for i in range(n):
+    sum=0
+    for j in str(i):
+        sum+=int(j)
+    if(int(i)%sum == 0):
+        print(i,end="|")
+
+
+numbers = [10, 20, 30, 40, 50]
+mul=1
+for i in numbers:
+    mul*=i
+print(mul)
+numbers = [30, 10, -45, 5, 20]
+min=numbers[0]
+for i in numbers:
+    if(i<min):
+        min=i
+print(min)
+
+n = [30, 10, -45, 5, 20]
+n.sort()
+print(n[0])
+
+n = [30, 10, -45, 5, 20]
+max=n[0]
+for i in n:
+    if(i>max):
+        max=i
+print(max)
+
+n = [30, 10, -45, 5, 20]
+n.sort(reverse = True)
+print(n[0])
+
+n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even=[]
+for i in n:
+    if(i%2 == 0):
+        even.append(i)
+print(even)
+
+word= ["apple", "banana", "cherry", "date", "elderberry", "dragon","fruits"]
+list=[]
+for i in word:
+    if(len(i)>5):
+        list.append(i)
+print(list)
+
+str=input("Enter a string")
+i=7
+str1=str[:i]+str[i+1:]
+print(str1)
+
+list = [1, 2, 3, 4, 2, 5, 2, 3, 4, 6, 5]
+count = 0
+for i in list:
+    if(i == 2):
+        count+=1
+print(f"2 repeats {count} times")
+
+input_str = "Python program to split and join a string"
+spilt= input_str.split()
+print(spilt)
+separator=" "
+join = separator.join(spilt)
+print(join)
 """
