@@ -346,4 +346,47 @@ print(spilt)
 separator=" "
 join = separator.join(spilt)
 print(join)
+
+class Student:
+    def __init__(self,name,roll,cgpa):
+        self.name=name
+        self.roll_no=roll
+        self.cgpa=cgpa
+    def display(self):
+        print(self.name)
+        print(self.roll_no)
+    def get(self,name,roll,cgpa):
+        self.name=input("Enter Your name : ")
+        self.roll=int(input("Enter Your roll number : "))
+        self.cgpa=float(input("Enter cgpa : "))
+
+class Student:
+    def __init__(self,name,m1,m2,m3):
+        self.name=name
+        self.m1=m1
+        self.m2=m2
+        self.m3=m3
+    def average(self):
+        self.average=(self.m1+self.m2+self.m3)/3
+        return self.average
+s1 = Student("Pratik",90,90,90)
+print("Average Marks: ",s1.average())
 """
+class Account:
+    def __init__(self,acc,balance):
+        self.acct=acc
+        self.balance=balance
+        self.print_balance()
+    def debit(self,amount):
+        self.balance = self.balance - amount
+        self.print_balance()
+    def credit(self,amount):
+        self.balance = self.balance + amount
+        self.print_balance()
+    def print_balance(self):
+        print("Current Balance : ",self.balance)
+acct_no = int(input("Enter Account number : "))
+balance = float(input("Enter balance : "))
+acct1 = Account(acct_no,balance)
+acct1.debit(5000)
+acct1.credit(10000)
