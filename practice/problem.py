@@ -371,7 +371,7 @@ class Student:
         return self.average
 s1 = Student("Pratik",90,90,90)
 print("Average Marks: ",s1.average())
-"""
+
 class Account:
     def __init__(self,acc,balance):
         self.acct=acc
@@ -390,3 +390,123 @@ balance = float(input("Enter balance : "))
 acct1 = Account(acct_no,balance)
 acct1.debit(5000)
 acct1.credit(10000)
+
+class Car:
+    def __init__(self,type):
+        self.type=type
+    @staticmethod
+    def start():
+        print("Car started ..")
+    @staticmethod
+    def stop():
+        print("Car stopped")
+class ToyotaCar(Car):
+    def __init__(self,name,type):
+        self.name=name
+        super().__init__(type)
+car1 = ToyotaCar("Fortuner","Petrol")
+print(car1.name)
+print(car1.start())
+print(car1.type)
+
+class Person:
+    name="Anonymous"
+    #def __init__(self,name):
+        #Person.name=name
+        #self.__class__.name=name
+    @classmethod
+    def Changename(cls,name):
+        cls.name=name
+p1 = Person()
+p1.Changename("pratik")
+print(p1.name)
+print(Person.name)
+
+class Student:
+    name=()
+    roll=()
+    @classmethod
+    def details(self,name,roll):
+        self.name=name
+        self.roll=roll
+s1 = Student()
+s1.details("Pratik",57)
+print(s1.name)
+
+class Student:
+    def __init__(self,phy,chem,math):
+        self.phy=phy
+        self.chem=chem
+        self.math=math
+    @property
+    def percentage(self):
+        return str((self.phy+self.chem+self.math)/3)+"%"
+s1 = Student(90,80,70)
+print(s1.percentage)
+s1.phy=95
+print(s1.percentage)
+
+class Complex:
+    def __init__(self,real,img):
+        self.real=real
+        self.img=img
+    def show(self):
+        print(self.real,"i + ",self.img,"j")
+    def __add__(self,num2):
+        numreal=self.real+num2.real
+        numimg=self.img+num2.img
+        return Complex(numreal,numimg)
+
+num1 = Complex(1,4)
+num2 = Complex(3,6)
+num1.show()
+num2.show()
+num3 = num1+num2
+num3.show()
+
+class Circle:
+    def __init__(self,radius):
+        self.radius=radius
+    def area(self):
+        return (22/7) * (self.radius ** 2)
+    def perimeter(self):
+        return 2*(22/7)*self.radius
+c1 = Circle(21)
+print(c1.area())
+print(c1.perimeter())
+
+class Employee:
+    def __init__(self,role,dept,sal):
+        self.role=role
+        self.dept=dept
+        self.sal=sal
+    def show(self):
+        print("Role : ",self.role)
+        print("Department : ",self.dept)
+        print("Salary : ",self.sal)
+class Engineer(Employee):
+    def __init__(self,name,age,role,dept,sal):
+        self.name=name
+        self.age=age
+        super().__init__(role,dept,sal)
+    def showdetail(self):
+        print(self.name)
+        print(self.age)
+        print(self.role)
+        print(self.dept)
+eng1=Engineer("Pratik",21,"Ai Engineer","IT","75,000")
+print(eng1.showdetail())
+
+
+class Product:
+    def __init__(self,item,price):
+        self.item=item
+        self.price=price
+    def __gt__(self,p2):
+        return self.price > p2.price
+p1 = Product("Chips",20)
+p2 = Product("Chips",10)
+print(p1<p2)
+
+---End of Basic Python---
+"""
