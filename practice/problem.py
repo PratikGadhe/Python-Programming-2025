@@ -510,3 +510,32 @@ print(p1<p2)
 
 ---End of Basic Python---
 """
+# l1=[]
+# num1 = int(input("Enter size of list 1 : "))
+# for i in range(num1):
+#     n1=int(input("Enter any number : "))
+#     l1.append(n1)
+# l2=[]
+# num2 = int(input("Enter size of list 2 : "))
+# for i in range(num2):
+#     n2=int(input("Enter any number : "))
+#     l2.append(n2)
+# # union = list(set().union(l1,l2))
+# union = list(set(l1).union(l2))
+# print(union)
+def union(l1 , l2):
+    num1 = int(input("Enter size of list 1 : "))
+    for i in range(num1):
+        n1=int(input("Enter any number : "))
+        l1.append(n1)
+
+    num2 = int(input("Enter size of list 2 : "))
+    for i in range(num2):
+        n2=int(input("Enter any number : "))
+        l2.append(n2)
+    union = list(set(l1+l2))
+    return union
+l1=[]
+l2=[]
+un=union(l1,l2)
+print(un)
