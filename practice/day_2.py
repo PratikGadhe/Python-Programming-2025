@@ -30,7 +30,6 @@ print(hcf)
 
 # Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal.
 
-
 """
 Divide 27 by 2. Quotient is 13, remainder is 1. Note the remainder.
 Divide 13 by 2. Quotient is 6, remainder is 1. Note the remainder.
@@ -50,7 +49,7 @@ while n > 0:
     n = n // 2   # integer division (gives quotient)
 
 print("Binary number:", binary)
-"""
+
 # decimal to octal 
 n = int(input("Enter a decimal number: "))
 octal = 0 
@@ -61,3 +60,18 @@ while n > 0 :
 octal = str(octal)
 octal = octal[::-1]
 print("Octal number : ", octal)
+"""
+
+
+# Write a Python Program to Display Fibonacci Sequence Using Recursion.
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return (fibonacci(n - 1)) + (fibonacci(n - 2))
+
+
+nterms = int(input("Enter the number of terms (greater than 0): "))
+print("fibonacci series : ")
+for i in range(nterms):
+    print(fibonacci(i))
