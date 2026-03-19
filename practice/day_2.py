@@ -60,7 +60,7 @@ while n > 0 :
 octal = str(octal)
 octal = octal[::-1]
 print("Octal number : ", octal)
-"""
+
 
 
 # Write a Python Program to Display Fibonacci Sequence Using Recursion.
@@ -75,3 +75,14 @@ nterms = int(input("Enter the number of terms (greater than 0): "))
 print("fibonacci series : ")
 for i in range(nterms):
     print(fibonacci(i))
+
+
+# Write a Python Program to Find Factorial of Number Using Recursion.
+n = int(input("Enter a number : "))
+def factorial(n):
+    if(n <= 1):
+        return n
+    else :
+        return n*factorial(n-1)
+print(factorial(n))
+"""
