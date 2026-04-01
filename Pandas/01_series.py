@@ -63,3 +63,73 @@ print(s1)
 array = np.array([1,2,3,4,5])
 s1 = pd.Series(array)
 print(s1)
+
+s1 = pd.Series({'a':1,'b':2,'c':3})
+s1.index.name = "ABCD"
+s1.name = "123"
+print(s1)
+
+s = pd.Series([1,2,3,4,5],index=['a','b','c','d','e'])
+print(s[:3])
+print(s[:-3])
+print(s[-3:])
+print(s[:])
+print(s[::-2])
+print(s[0::2])
+
+# iloc
+print(s.iloc[-3:12])
+
+# loc
+print(s.loc['a':'o'])
+
+# series attributes
+
+s = pd.Series([1,2,3,np.nan,5,6],index=['p','r','a','t','i','k'])
+print(s)
+print(s.index)
+print(s.values)
+print(s.size)
+print(s.hasnans)
+print(s.empty)
+
+# retrieving a series 1. head(n) 2.tail(n) 3.count()
+s = pd.Series([1,2,3,np.nan,5,6],index=['p','r','a','t','i','k'])
+print(s.head(2))
+print(s.tail())
+print(s.head(-2)) #prints all element except the last two elements
+print(s.tail(-2))
+print(s.count()) #count the number of non nan values 
+print(s.size) #counts the length of series 
+
+# mathematical expressions on series 
+s = pd.Series([11,12,13,14],index=[2,1,3,4])
+s1 = pd.Series([21,22,23,24],index=[2,1,3,4])
+s3 = pd.Series([11,12,13,14],index=[101,102,103,104])
+s4 = pd.Series([10,10,10,10],index=[10,102,103,4])
+print(s1-s)
+print(s+s3)
+print(s3-s4)
+print(s3*s)
+
+# vector operations
+print(s+2)
+print(s*2)
+print(s<15)
+print(s**2)
+
+print(s)
+print(s[s<20])
+
+print(s.drop(2,inplace=True))
+print(s)
+print(s.drop([1,4],inplace = True))
+print(s)
+
+s = pd.Series([1,2,3,np.nan,5,6,6],index=['p','r','a','t','i','k','a'])
+print(s.dropna(inplace = True))
+print(s)
+print(s.drop_duplicates(inplace = True))
+print(s)
+
+# END OF SERIES IN PANDAS
