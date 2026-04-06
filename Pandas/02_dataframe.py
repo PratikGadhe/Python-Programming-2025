@@ -69,3 +69,25 @@ cols = ["Name",'Salary','Age']
 index = [1,2]
 df = pd.DataFrame(data =array , columns = cols , index = index)
 print(df)
+
+df = pd.DataFrame({"name":["Pratik","Sanket",],"age":[20,23]},index=['a','b'])
+print(df)
+
+# Attributes in dataframe 1. index
+print(df.index)
+# 2. columns
+print(df.columns)
+# 3.axes
+print(df.axes)
+# 4.dtypes
+print(df.dtypes)
+# 5.size (rows * columns)
+print(df.size)
+# 6.shape
+print(df.shape)
+# 7.ndim
+print(df.ndim)
+# 8.empty
+print(df.empty)
+# 9.T (transpose)
+print(df.T)
