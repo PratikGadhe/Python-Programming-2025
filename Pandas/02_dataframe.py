@@ -70,7 +70,7 @@ index = [1,2]
 df = pd.DataFrame(data =array , columns = cols , index = index)
 print(df)
 
-df = pd.DataFrame({"name":["Pratik","Sanket",],"age":[20,23]},index=['a','b'])
+df = pd.DataFrame({"name":["Pratik","Sanket",],"age":[20,np.nan]},index=['a','b'])
 print(df)
 
 # Attributes in dataframe 1. index
@@ -91,3 +91,60 @@ print(df.ndim)
 print(df.empty)
 # 9.T (transpose)
 print(df.T)
+
+
+# method in dataframe : df.isna()
+print(df.isna())
+
+# setting column as index 
+df.set_index("name",inplace = True)
+print(df)
+
+# resetting  index as column
+df.reset_index(inplace = True)
+print(df)
+
+
+s1 = pd.Series(["Rinku",'ritu','ajay','pankaj','aaditya'])
+s2 = pd.Series([67,78,75,88,92])
+s3 = pd.Series([78,67,89,90,56])
+s4 = pd.Series([78,88,98,90,87])
+s5 = pd.Series([77,70,80,67,86])
+df = pd.DataFrame({"name":s1,"eng":s2,"eco":s3,'ip':s4,'acct':s5})
+print(df)
+# acessing single element using index position (.iat[])
+print(df.iat[1,3])
+
+# acessing single element using index label (.at[])
+print(df.at[3,"name"])
+
+# adding new row using .loc[index label]
+df.loc[5]=["pratik",90,80,95,78]
+print(df)
+
+# modifying the row usinf .loc
+df.loc[5]=["Sanket",90,80,95,91]
+print(df)
+
+df.rename(columns = {"name":"NAME"},inplace=True)
+print(df)
+
+df['total']=df['eng']+df['eco']+df['ip']+df['acct']
+print(df)
+df['surname']=['sharma','giramkar','atul','tripathi','aadhave','gadhe','gadhe']
+print(df)
+
+df.insert(7,'age',[43,20,57,58,21,20,23])
+print(df)
+
+print(df["NAME"])
+print(df.surname)
+
+
+df.rename(columns = {"surname":"SURNAME"},inplace = True)
+print(df.iloc[0:6,0:6])
+
+del df["acct"]
+print(df)
+print(df.pop("total"))
+print(df)
