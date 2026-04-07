@@ -148,3 +148,32 @@ del df["acct"]
 print(df)
 print(df.pop("total"))
 print(df)
+
+df = pd.DataFrame()
+df['name']=['shruti','gunjan','tanya']
+df['phy']=[90,80,88]
+df['chem']=[90,80,88]
+df['total']=df['phy']+df['chem']
+print(df)
+
+# head function in dataframe
+s1 = pd.Series(["Rinku",'ritu','ajay','pankaj','aaditya'])
+s2 = pd.Series([67,78,75,88,92])
+s3 = pd.Series([78,67,89,90,56])
+s4 = pd.Series([78,88,98,90,87])
+s5 = pd.Series([77,70,80,67,86])
+df = pd.DataFrame({"name":s1,"eng":s2,"eco":s3,'ip':s4,'acct':s5})
+print(df)
+
+print(df.head(2))
+print(df.tail(-3))
+print(df[2:4])
+
+# concatenation in dataframe
+d1 = {"roll_no":[10,11,12,13,14,15],"name":["ankit","pihu","rinku","yash","vijay","khushi"]}
+d2 = {"roll_no":[20,21,22,23,24,25],"name":["shaurya","pinky","anubhav","khushi","vinay","neetu"]}
+df1 = pd.DataFrame(d1)
+df2 = pd.DataFrame(d2)
+# df3 = df1 + df2
+df3 = pd.concat([df1,df2],ignore_index = True,axis = 1)
+print(df3)
