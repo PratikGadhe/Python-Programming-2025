@@ -10,4 +10,20 @@ Example:
 Input: "cat dog cat bird dog cat"
 Output: cat
 """
-# Remaining--------------------------------
+text = "cat dog cat bird dog cat"
+words = text.split()
+
+max_count = 0
+most_word = ""
+
+for i in range(len(words)):
+    count = 0
+    for j in range(len(words)):
+        if words[i] == words[j]:
+            count += 1
+    
+    if count > max_count:
+        max_count = count
+        most_word = words[i]
+
+print(most_word)
