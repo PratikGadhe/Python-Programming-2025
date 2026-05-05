@@ -10,11 +10,15 @@ Example:
 Input: "Hello\nWorld"
 Output: Lines = 2, Words = 2, Characters = 10
 """
-string = "Hello\nWorld"
-line = 0
-words = 0
-char = 0
-for i in string:
-    if(65 <= ord(i) <= 90 or 97 <= ord(i) <= 123):
-        char+=1
-    
+text = "Hello\nWorld"
+
+lines = text.split('\n')
+words = text.split()
+
+line_count = len(lines)
+word_count = len(words)
+char_count = len(text)
+
+print("Lines =", line_count)
+print("Words =", word_count)
+print("Characters =", char_count)
