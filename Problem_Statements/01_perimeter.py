@@ -19,8 +19,8 @@ Constraints:
 def triangle(a,b,c):
     result = a + b + c
     return result
-def rectangle(l,b):
-    result = 2 * (l + b)
+def rectangle(l1,b):
+    result = 2 * (l1 + b)
     return result
 def circle(r):
     result = 2 * 3.14 * r
